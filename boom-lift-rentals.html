@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boom Lift Rentals in Bangalore | Telescopic & Articulating Boom Lifts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO META -->
+  <meta name="description" content="Boom lift rentals in Bangalore with telescopic and articulating boom lifts for safe work at height. Flexible rentals with operators, site support and fast deployment." />
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* GLOBAL RESET + BOX SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: "Poppins", sans-serif;
+      background-color: #F3F3E0;
+      color: #183B4E;
+      scroll-behavior: smooth;
+      font-size: 1rem; /* minimum font size */
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* LAYOUT HELPERS */
+    .page-wrapper {
+      min-height: 100vh;
+      background-color: #F3F3E0;
+      width: 100%;
+    }
+
+    .section {
+      width: 100%;
+      padding: 3.5rem 1.5rem;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-heading {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subheading {
+      font-size: 1rem;
+      max-width: 36rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      color: #DDA853;
+    }
+
+    /* BUTTONS – "CLICK HERE TO ..." */
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      border: 2px solid #F3F3E0;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background-color: #DDA853;
+      color: #183B4E;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .btn-primary span {
+      color: inherit;
+    }
+
+    .btn-primary:hover {
+      background-color: #F3F3E0;
+      border-color: #DDA853;
+      color: #183B4E;
+    }
+
+    .js-open-enquiry {
+      cursor: pointer;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.from-left {
+      transform: translateX(-40px);
+    }
+
+    .reveal.from-right {
+      transform: translateX(40px);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+
+    /* SECTION 1: HERO */
+    .hero {
+      background: radial-gradient(circle at top left, #F3F3E0 0%, #27548A 40%, #183B4E 75%);
+      color: #F3F3E0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-text {
+      font-size: 1rem;
+      max-width: 34rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-badge {
+      font-size: 1rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(243, 243, 224, 0.55);
+      background-color: rgba(3, 16, 28, 0.4);
+    }
+
+    .hero-meta {
+      margin-top: 1.3rem;
+      font-size: 1rem;
+      color: rgba(243, 243, 224, 0.85);
+    }
+
+    .hero-meta strong {
+      color: #DDA853;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      height: 260px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(243, 243, 224, 0.1), rgba(221, 168, 83, 0.5));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero-circle {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243, 243, 224, 0.55);
+      top: -35px;
+      right: -35px;
+    }
+
+    .hero-bar {
+      position: absolute;
+      width: 170px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #DDA853, #F3F3E0);
+      bottom: 12%;
+      left: -25%;
+    }
+
+    /* SECTION 2: BOOM TYPES & HEIGHTS */
+    .section-types {
+      background-color: #F3F3E0;
+    }
+
+    .types-grid {
+      margin-top: 1.8rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .type-card {
+      background-color: #FFFFFF;
+      border-radius: 18px;
+      padding: 1.1rem 1.2rem 1.3rem;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .type-label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #183B4E;
+    }
+
+    .type-range {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #27548A;
+      margin-bottom: 0.35rem;
+    }
+
+    .type-text {
+      font-size: 1rem;
+      opacity: 0.9;
+      flex: 1;
+    }
+
+    .type-meta {
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      opacity: 0.8;
+    }
+
+    /* SECTION 3: APPLICATIONS + IMAGE */
+    .section-applications {
+      background-color: #183B4E;
+      color: #F3F3E0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .applications-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .applications-list {
+      list-style: none;
+      margin: 1rem 0 1.3rem;
+    }
+
+    .applications-list li {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .applications-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #DDA853;
+      position: absolute;
+      left: 0.2rem;
+      top: 0.8rem;
+    }
+
+    .applications-meta {
+      font-size: 1rem;
+      color: rgba(243, 243, 224, 0.85);
+      margin-top: 0.7rem;
+    }
+
+    .applications-image-wrap {
+      position: relative;
+    }
+
+    .applications-image-placeholder {
+      width: 100%;
+      height: 240px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(243, 243, 224, 0.16), rgba(221, 168, 83, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .applications-line {
+      position: absolute;
+      width: 160px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #27548A, #000000);
+      top: 12%;
+      right: -30%;
+    }
+
+    .applications-circle {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243, 243, 224, 0.45);
+      bottom: -28px;
+      left: -16px;
+    }
+
+    /* SECTION 4: BENEFITS VS SCAFFOLDING */
+    .section-benefits {
+      background-color: #F3F3E0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2rem;
+      margin-top: 1.6rem;
+      align-items: flex-start;
+    }
+
+    .benefits-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+
+    .benefits-list li {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .benefits-list li::before {
+      content: "✓";
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #27548A;
+    }
+
+    .benefit-callout {
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .benefits-box {
+      background-color: #FFFFFF;
+      border-radius: 18px;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+      font-size: 1rem;
+    }
+
+    .benefits-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .benefits-box p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* SECTION 5: CTA / FAQs */
+    .section-cta {
+      background: linear-gradient(135deg, #183B4E 0%, #27548A 60%, #000000 100%);
+      color: #F3F3E0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      margin-top: 1.6rem;
+    }
+
+    .cta-text-block p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: rgba(243,243,224,0.95);
+    }
+
+    .cta-meta {
+      font-size: 1rem;
+      color: rgba(243, 243, 224, 0.8);
+      margin-top: 1rem;
+    }
+
+    .faq-list {
+      list-style: none;
+    }
+
+    .faq-item {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(243,243,224,0.16);
+      padding-bottom: 0.5rem;
+    }
+
+    .faq-q {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .faq-a {
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+      margin-top: 0.2rem;
+    }
+
+    .cta-bar {
+      position: absolute;
+      width: 200px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #DDA853, #F3F3E0);
+      top: 14%;
+      left: -10%;
+      opacity: 0.9;
+    }
+
+    .cta-circle {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243, 243, 224, 0.5);
+      bottom: -40px;
+      right: -30px;
+    }
+
+    /* INLINE FORM SECTION AT BOTTOM */
+    .inline-form-section {
+      padding: 0;
+      min-height: auto;
+    }
+
+    .inline-form-frame {
+      width: 100%;
+      border: none;
+      display: block;
+      height: 900px; /* adjust if you want more/less height */
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner,
+      .applications-inner,
+      .benefits-grid,
+      .cta-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-image-wrap,
+      .applications-image-wrap {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 2.6rem 1.2rem;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-image-placeholder,
+      .applications-image-placeholder {
+        height: 220px;
+      }
+
+      .types-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .benefits-grid {
+        gap: 1.3rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .section-heading {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* NAVBAR / FOOTER PLACEHOLDER */
+    #navbar-placeholder,
+    #footer-placeholder {
+      width: 100%;
+    }
+
+    /* MODAL FOR FORM */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-content {
+      width: 96%;
+      max-width: 1120px;
+      height: 90vh;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #000;
+      position: relative;
+    }
+
+    .modal-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      z-index: 2;
+      background: rgba(0,0,0,0.65);
+      color: #F3F3E0;
+      border: 1px solid rgba(243,243,224,0.6);
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .hero-image-placeholder {
+  width: 100%;
+  height: 360px;               /* your preferred hero height */
+  border-radius: 5px;
+  background: linear-gradient(90deg, #DDA853, #F3F3E0);       /* optional background */
+  overflow: hidden;            /* keeps image inside */
+  padding: 1rem;                  /* remove left/right gap */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills the area without gaps */
+  display: block;
+}
+
+
+.applications-image-placeholder {
+  width: 100%;
+  height: 260px;               /* change height if needed */
+  border-radius: 5px;
+  background: linear-gradient(90deg, #DDA853, #F3F3E0);       /* optional */
+  overflow: hidden;            /* keeps image inside */
+  padding: 1rem;                  /* remove unnecessary space */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.applications-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* ensures full coverage */
+  display: block;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <!-- NAVBAR LOADED BY JS -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- SECTION 1: HERO -->
+  <section class="section hero">
+    <div class="section-inner hero-inner">
+      <div class="reveal from-left">
+        <div class="eyebrow">Boom lift rentals Bangalore</div>
+        <h1 class="hero-title">
+          Telescopic & Articulating Boom Lift Rentals for Safe Work at Height
+        </h1>
+        <p class="hero-text">
+          Hire reliable boom lifts for façade work, industrial maintenance, shutdown projects and construction sites across Bangalore.
+          Our fleet includes straight boom and articulating boom lifts with operators and site support.
+        </p>
+
+        <div class="hero-badges">
+          <span class="hero-badge">Working heights up to ~120 ft</span>
+          <span class="hero-badge">Diesel & electric boom lifts</span>
+          <span class="hero-badge">Operator & site support</span>
+        </div>
+
+        <button class="btn-primary js-open-enquiry">
+          <span>Click here to get a boom lift quote</span>
+        </button>
+
+        <p class="hero-meta">
+          <strong>Service areas:</strong> Electronic City, Whitefield, Peenya, Bidadi, Hosur Road, Tumkur Road and other Bangalore industrial zones.
+        </p>
+      </div>
+
+      <div class="hero-image-wrap reveal from-right">
+  <div class="hero-image-placeholder">
+    <img src="./images/b8.jpg" alt="Boom Lift Image">
+  </div>
+
+  <div class="hero-circle"></div>
+  <div class="hero-bar"></div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: BOOM LIFT TYPES & HEIGHTS -->
+  <section class="section section-types">
+    <div class="section-inner reveal">
+      <div class="eyebrow">Boom lift range</div>
+      <h2 class="section-heading">Boom lift options for different heights and site conditions</h2>
+      <p class="section-subheading" style="color:#183B4E;">
+        Choose from straight (telescopic) and articulating boom lifts to reach over obstacles, work on narrow streets
+        or access high façades in tight city locations across Bangalore.
+      </p>
+
+      <div class="types-grid">
+        <article class="type-card reveal from-left">
+          <h3 class="type-label">Telescopic boom lifts</h3>
+          <div class="type-range">Approx. 60 ft – 120 ft</div>
+          <p class="type-text">
+            Ideal for long horizontal outreach and high vertical access on refineries, power plants, steel structures and
+            high-rise façades where you need a straight path to the work area.
+          </p>
+          <p class="type-meta">
+            Common uses: industrial shutdowns, outdoor construction and large open sites.
+          </p>
+        </article>
+
+        <article class="type-card reveal">
+          <h3 class="type-label">Articulating boom lifts</h3>
+          <div class="type-range">Approx. 40 ft – 80 ft</div>
+          <p class="type-text">
+            Multiple joints allow the boom to move up and over obstacles, making it perfect for working around machines,
+            mezzanines, pipe racks and building projections inside or outside the plant.
+          </p>
+          <p class="type-meta">
+            Common uses: plant maintenance, atriums, congested industrial areas.
+          </p>
+        </article>
+
+        <article class="type-card reveal from-right">
+          <h3 class="type-label">Truck-mounted boom lifts</h3>
+          <div class="type-range">Approx. 40 ft – 90 ft</div>
+          <p class="type-text">
+            Boom lifts mounted on road-legal trucks for quick movement between sites, ideal for street lighting, signage,
+            glass cleaning and short-duration works spread across Bangalore city.
+          </p>
+          <p class="type-meta">
+            Common uses: road-side, city maintenance and multiple-location work.
+          </p>
+        </article>
+      </div>
+
+      <div style="margin-top:1.6rem;">
+        <button class="btn-primary js-open-enquiry">
+          <span>Click here to match a boom lift to your height</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: APPLICATIONS + SECOND IMAGE -->
+  <section class="section section-applications">
+    <div class="section-inner applications-inner">
+      <div class="reveal from-left">
+        <div class="eyebrow">Where boom lifts help most</div>
+        <h2 class="section-heading">Typical boom lift applications in Bangalore projects</h2>
+        <p class="section-subheading">
+          Boom lifts are used wherever safe and flexible access is required at height, especially when scaffolding or ladders
+          become slow, risky or impractical.
+        </p>
+
+        <ul class="applications-list">
+          <li>Glass and façade cleaning of IT parks, malls and office towers.</li>
+          <li>Installation and maintenance of industrial piping, cable trays and ducting.</li>
+          <li>Shutdown maintenance inside power plants and manufacturing facilities.</li>
+          <li>Billboard, hoarding, signboard and branding installation on high structures.</li>
+          <li>Street-light pole maintenance and overhead infrastructure work.</li>
+        </ul>
+
+        <p class="applications-meta">
+          We can also support special jobs like night works, express shutdown windows and critical lifts
+          that require additional planning and supervision.
+        </p>
+
+        <div style="margin-top:1.3rem;">
+          <button class="btn-primary js-open-enquiry">
+            <span>Click here to share your boom lift application</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="applications-image-wrap reveal from-right">
+  <div class="applications-image-placeholder">
+    <img src="./images/bb2.webp" alt="Boom Lift Application Photo">
+  </div>
+
+  <div class="applications-line"></div>
+  <div class="applications-circle"></div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: BENEFITS VS SCAFFOLDING -->
+  <section class="section section-benefits">
+    <div class="section-inner reveal">
+      <div class="eyebrow">Why boom lifts</div>
+      <h2 class="section-heading">Why rent a boom lift instead of scaffolding or ladders?</h2>
+      <p class="section-subheading" style="color:#183B4E;">
+        Renting a boom lift gives you faster setup and safer access, especially on projects that move quickly
+        or demand frequent repositioning of the working height.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="reveal from-left">
+          <ul class="benefits-list">
+            <li>Reduced setup time – drive to the spot, elevate and start work in minutes.</li>
+            <li>Improved safety – stable platform with guardrails and controls at the basket.</li>
+            <li>Reach over obstacles – go up and over machinery, parked vehicles and structures.</li>
+            <li>Flexible working heights – adjust height and outreach as the job moves.</li>
+            <li>Lower labour dependency – fewer people required compared to scaffolding erection.</li>
+          </ul>
+
+          <p class="benefit-callout">
+            For time-bound or shutdown projects in Bangalore, boom lifts can significantly cut access time and
+            keep more focus on actual work instead of temporary access systems.
+          </p>
+        </div>
+
+        <div class="benefits-box reveal from-right">
+          <h3>Planning a boom lift for your next project?</h3>
+          <p>
+            Share your site photos, working height and job details with our team. We’ll suggest a telescopic,
+            articulating or truck-mounted boom lift that fits your access requirement and ground conditions,
+            along with an operator where needed.
+          </p>
+          <div style="margin-top:1rem;">
+            <button class="btn-primary js-open-enquiry">
+              <span>Click here to plan your boom lift schedule</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: CTA & FAQs -->
+  <section class="section section-cta">
+    <div class="section-inner cta-inner reveal">
+      <div class="eyebrow">Boom lift rentals Bangalore</div>
+      <h2 class="section-heading">Get a tailored boom lift quote for your site</h2>
+
+      <div class="cta-grid">
+        <div class="cta-text-block">
+          <p>
+            Every Bangalore site behaves differently – some have narrow access, some need longer outreach,
+            others need compact machines working inside finished buildings.
+          </p>
+          <p>
+            Tell us your exact working height, access path and job type. We’ll help you decide whether a telescopic
+            boom, articulating boom or truck-mounted boom is the right fit, and share a transparent rental quote.
+          </p>
+
+          <button class="btn-primary js-open-enquiry">
+            <span>Click here to send your boom lift enquiry</span>
+          </button>
+
+          <p class="cta-meta">
+             Call: <a href="tel:+919999999999" style="text-decoration:none; color:inherit;">+91 99999 99999</a> &nbsp; | &nbsp;
+  Email: <a href="mailto:info@boomliftbangalore.com" style="text-decoration:none; color:inherit;">info@boomliftbangalore.com</a>
+          </p>
+        </div>
+
+        <div>
+          <ul class="faq-list">
+            <li class="faq-item">
+              <div class="faq-q">How early should I book a boom lift?</div>
+              <div class="faq-a">
+                For planned works, 2–3 days notice helps us allocate the right machine. For urgent jobs in Bangalore,
+                we try to support same-day or next-day based on fleet availability.
+              </div>
+            </li>
+            <li class="faq-item">
+              <div class="faq-q">Can you supply an operator with the boom lift?</div>
+              <div class="faq-a">
+                Yes. We can provide trained operators familiar with industrial and commercial job sites, or hand over
+                the machine to your certified operators if preferred.
+              </div>
+            </li>
+            <li class="faq-item">
+              <div class="faq-q">Do you support night-shift and shutdown works?</div>
+              <div class="faq-a">
+                We regularly support shutdowns and night works in plants and IT parks. Share your schedule and we will
+                align the boom lift deployment accordingly.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-bar"></div>
+    <div class="cta-circle"></div>
+  </section>
+
+  <!-- INLINE FULL-WIDTH FORM AT BOTTOM -->
+  <section class="section inline-form-section">
+    <div style="width:100%;">
+      <iframe
+        src="form.html"
+        title="Enquiry form full page"
+        class="inline-form-frame">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER LOADED BY JS -->
+  <div id="footer-placeholder"></div>
+</div>
+
+<!-- MODAL WITH FULL-WIDTH FORM (form.html) -->
+<div class="modal-backdrop" id="enquiryModal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" type="button" id="modalCloseBtn">Close ✕</button>
+    <iframe src="form.html" class="modal-frame" title="Enquiry form"></iframe>
+  </div>
+</div>
+
+<script>
+  /* LOAD NAVBAR & FOOTER HTML FRAGMENTS */
+  function loadFragment(containerId, file, callback) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    fetch(file)
+      .then(function (response) { return response.text(); })
+      .then(function (html) {
+        container.innerHTML = html;
+        if (typeof callback === "function") callback();
+      })
+      .catch(function (error) { console.warn("Could not load " + file, error); });
+  }
+
+  function initNavbarBehaviour() {
+    var toggleBtn = document.getElementById("navbarToggle");
+    var mobilePanel = document.getElementById("navbarMobilePanel");
+
+    if (!toggleBtn || !mobilePanel) return;
+
+    toggleBtn.addEventListener("click", function () {
+      toggleBtn.classList.toggle("active");
+      mobilePanel.classList.toggle("open");
+    });
+
+    // close menu when any mobile link clicked
+    var links = mobilePanel.querySelectorAll("a");
+    links.forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggleBtn.classList.remove("active");
+        mobilePanel.classList.remove("open");
+      });
+    });
+  }
+
+  loadFragment("navbar-placeholder", "navbar.html", initNavbarBehaviour);
+  loadFragment("footer-placeholder", "footer.html");
+
+  /* SIMPLE SCROLL REVEAL */
+  (function () {
+    var revealElements = document.querySelectorAll(".reveal");
+
+    function onScrollReveal(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    var observer = new IntersectionObserver(onScrollReveal, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  })();
+
+  /* MODAL OPEN/CLOSE LOGIC – EVERY BUTTON */
+  (function () {
+    var modal = document.getElementById("enquiryModal");
+    var closeBtn = document.getElementById("modalCloseBtn");
+
+    function openModal() {
+      if (!modal) return;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function attachEnquiryHandlers() {
+      var triggers = document.querySelectorAll(".js-open-enquiry");
+      triggers.forEach(function (el) {
+        el.addEventListener("click", openModal);
+      });
+    }
+
+    // DOM is already loaded since script is at bottom
+    attachEnquiryHandlers();
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeModal);
+    }
+
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  })();
+</script>
+</body>
+</html>

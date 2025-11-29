@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Boom Lift & Scissor Lift Rentals in Bangalore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO META -->
+  <meta name="description" content="Contact Boom Lift Rental Bangalore for boom lift, scissor lift, man lift and cherry picker rentals. Call, email or send an enquiry for fast quotes in Bangalore." />
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* GLOBAL RESET + BOX SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: "Poppins", sans-serif;
+      background-color: #F3F3E0;
+      color: #183B4E;
+      scroll-behavior: smooth;
+      font-size: 1rem; /* minimum */
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #F3F3E0;
+    }
+
+    .section {
+      width: 100%;
+      padding: 3.5rem 1.5rem;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-heading {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subheading {
+      font-size: 1rem;
+      max-width: 36rem;
+      opacity: 0.95;
+      margin-bottom: 1.2rem;
+    }
+
+    .eyebrow {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      color: #DDA853;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      border: 2px solid #F3F3E0;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background-color: #DDA853;
+      color: #183B4E;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .btn-primary span {
+      color: inherit;
+    }
+
+    .btn-primary:hover {
+      background-color: #F3F3E0;
+      border-color: #DDA853;
+      color: #183B4E;
+    }
+
+    .js-open-enquiry {
+      cursor: pointer;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.from-left {
+      transform: translateX(-40px);
+    }
+
+    .reveal.from-right {
+      transform: translateX(40px);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+
+    /* SECTION 1: CONTACT HERO */
+    .contact-hero {
+      background: radial-gradient(circle at top left, #F3F3E0 0%, #27548A 40%, #183B4E 80%);
+      color: #F3F3E0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .contact-hero-meta {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+    }
+
+    .contact-hero-badges {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .contact-hero-badge {
+      font-size: 1rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(243,243,224,0.55);
+      background-color: rgba(3,16,28,0.4);
+    }
+
+    .contact-card-wrap {
+      position: relative;
+    }
+
+    .contact-card {
+      background-color: #041522;
+      border-radius: 22px;
+      padding: 1.4rem 1.5rem 1.5rem;
+      box-shadow: 0 24px 56px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at top left, rgba(243,243,224,0.18), transparent 60%);
+      opacity: 0.8;
+    }
+
+    .contact-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-card-heading {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-card-text {
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+      margin-bottom: 1rem;
+    }
+
+    .contact-card-list {
+      list-style: none;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-card-list li {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-card-label {
+      font-weight: 600;
+      color: #DDA853;
+    }
+
+    .contact-hero-circle {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243,243,224,0.55);
+      top: -30px;
+      right: -35px;
+    }
+
+    /* .contact-hero-bar {
+      position: absolute;
+      width: 180px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #DDA853, #F3F3E0);
+      bottom: 14%;
+      left: -25%;
+    } */
+
+    /* SECTION 2: CONTACT OPTIONS CARDS */
+    .section-contact-options {
+      background-color: #F3F3E0;
+    }
+
+    .contact-options-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.7rem;
+    }
+
+    .contact-option-card {
+      background-color: #FFFFFF;
+      border-radius: 18px;
+      padding: 1.2rem 1.3rem 1.4rem;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .contact-option-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .contact-option-text {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .contact-option-meta {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .contact-option-list {
+      list-style: none;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .contact-option-list li {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* SECTION 3: LOCATION & HOURS */
+    .section-location {
+      background-color: #183B4E;
+      color: #F3F3E0;
+    }
+
+    .location-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 260px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(243,243,224,0.2), rgba(221,168,83,0.8));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .location-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+
+    .location-list li {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .location-list li::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #DDA853;
+      left: 0.1rem;
+      top: 0.65rem;
+    }
+
+    .hours-box {
+      background-color: #041522;
+      border-radius: 18px;
+      padding: 1.2rem 1.3rem 1.3rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+      margin-bottom: 1.1rem;
+    }
+
+    .hours-heading {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .hours-text {
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-list {
+      list-style: none;
+    }
+
+    .faq-item {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+    }
+
+    .faq-a {
+      color: rgba(243,243,224,0.9);
+    }
+
+    /* INLINE FORM AT BOTTOM */
+    .inline-form-section {
+      padding: 0;
+      min-height: auto;
+    }
+
+    .inline-form-frame {
+      width: 100%;
+      border: none;
+      display: block;
+      height: 900px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .contact-hero-inner,
+      .location-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-card-wrap {
+        margin-top: 1.6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 2.6rem 1.2rem;
+      }
+
+      .contact-options-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-heading {
+        font-size: 1.6rem;
+      }
+    }
+
+    #navbar-placeholder,
+    #footer-placeholder {
+      width: 100%;
+    }
+
+    /* MODAL FORM */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-content {
+      width: 96%;
+      max-width: 1120px;
+      height: 90vh;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #000;
+      position: relative;
+    }
+
+    .modal-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      z-index: 2;
+      background: rgba(0,0,0,0.65);
+      color: #F3F3E0;
+      border: 1px solid rgba(243,243,224,0.6);
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .bl-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:black;
+  margin-bottom: 0.8rem;
+}
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- SECTION 1: CONTACT HERO -->
+  <section class="section contact-hero">
+    <div class="section-inner contact-hero-inner">
+      <!-- Left: intro text -->
+      <div class="reveal from-left">
+                 <div class="bl-location-chip">
+        <span class="bl-location-chip-dot"></span>
+        <span>Our Location : Bengaluru - Peenya Industrial Area</span>
+      </div>
+
+        <div class="eyebrow">Contact our Bangalore team</div>
+        <h1 class="section-heading">Talk to us about boom lifts, scissor lifts and man lifts</h1>
+        <p class="section-subheading">
+          Reach out for quotes, availability and technical clarifications. Share your site details and our team
+          will help you choose the right boom lift, scissor lift, man lift or cherry picker for your project in Bangalore.
+        </p>
+        <p class="contact-hero-meta">
+          We support factories, warehouses, IT parks, malls, infrastructure and shutdown projects that need safe
+          work at height.
+        </p>
+        <div class="contact-hero-badges">
+          <span class="contact-hero-badge">Same-day / next-day deployment*</span>
+          <span class="contact-hero-badge">Operator & bare rentals</span>
+          <span class="contact-hero-badge">Height access specialists</span>
+        </div>
+      </div>
+
+      <!-- Right: main contact card -->
+      <div class="contact-card-wrap reveal from-right">
+        <div class="contact-card">
+          <div class="contact-card-inner">
+            <div class="eyebrow" style="color:#DDA853; margin-bottom:0.4rem;">Direct contact</div>
+            <div class="contact-card-heading">Reach our Bangalore rental desk</div>
+            <p class="contact-card-text">
+              Share a quick overview of your work at height and we’ll respond with a tailored quote and the
+              earliest available deployment slot.
+            </p>
+            <ul class="contact-card-list">
+              <li><span class="contact-card-label">Call:</span> +91 99999 99999</li>
+              <li><span class="contact-card-label">Email:</span> info@boomliftrentalsbangalore.com</li>
+              <li><span class="contact-card-label">Working hours:</span> Mon – Sat, 9:00 AM to 7:00 PM</li>
+            </ul>
+            <button class="btn-primary js-open-enquiry">
+              <span>Click here to send us your enquiry</span>
+            </button>
+          </div>
+        </div>
+        <div class="contact-hero-circle"></div>
+        <div class="contact-hero-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTACT OPTIONS (3 CARDS) -->
+  <section class="section section-contact-options">
+    <div class="section-inner reveal">
+      <div class="eyebrow">How can we help?</div>
+      <h2 class="section-heading">Choose the right contact path for your requirement</h2>
+      <p class="section-subheading" style="color:#183B4E;">
+        Whether you need a fresh quote, want to plan a shutdown, or have a running rental on site, use the options below
+        so we can route your request quickly.
+      </p>
+
+      <div class="contact-options-grid">
+        <!-- Card 1: New rentals -->
+        <article class="contact-option-card">
+          <h3 class="contact-option-title">New rental enquiries</h3>
+          <p class="contact-option-text">
+            For boom lifts, scissor lifts, man lifts or cherry pickers you need in the next few days or weeks.
+          </p>
+          <ul class="contact-option-list">
+            <li><span class="contact-card-label">Call / WhatsApp:</span> +91 99999 99999</li>
+            <li><span class="contact-card-label">Email:</span> sales@boomliftrentalsbangalore.com</li>
+          </ul>
+          <p class="contact-option-meta">
+            Share working height, site location and approximate duration.
+          </p>
+          <button class="btn-primary js-open-enquiry" style="margin-top:0.6rem;">
+            <span>Click here to request a fresh quote</span>
+          </button>
+        </article>
+
+        <!-- Card 2: Ongoing sites -->
+        <article class="contact-option-card">
+          <h3 class="contact-option-title">Support for ongoing sites</h3>
+          <p class="contact-option-text">
+            For machines already running at your site – servicing, extensions, additional lifts or operator changes.
+          </p>
+          <ul class="contact-option-list">
+            <li><span class="contact-card-label">Support line:</span> +91 99999 99990</li>
+            <li><span class="contact-card-label">Email:</span> support@boomliftrentalsbangalore.com</li>
+          </ul>
+          <p class="contact-option-meta">
+            Please mention machine number, site name and contact person when you reach out.
+          </p>
+          <button class="btn-primary js-open-enquiry" style="margin-top:0.6rem;">
+            <span>Click here to log a service or extension</span>
+          </button>
+        </article>
+
+        <!-- Card 3: Accounts & billing -->
+        <article class="contact-option-card">
+          <h3 class="contact-option-title">Accounts & billing</h3>
+          <p class="contact-option-text">
+            For invoices, payment confirmations, rate contracts and vendor registration documentation.
+          </p>
+          <ul class="contact-option-list">
+            <li><span class="contact-card-label">Accounts desk:</span> +91 99999 99991</li>
+            <li><span class="contact-card-label">Email:</span> accounts@boomliftrentalsbangalore.com</li>
+          </ul>
+          <p class="contact-option-meta">
+            Include PO number, site name and billing period so we can track your details quickly.
+          </p>
+          <button class="btn-primary js-open-enquiry" style="margin-top:0.6rem;">
+            <span>Click here to share billing details</span>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: LOCATION, HOURS & FAQ -->
+  <section class="section section-location">
+    <div class="section-inner location-inner">
+      <!-- Left: map + service areas -->
+      <div class="reveal from-left">
+        <div class="eyebrow">Service areas</div>
+        <h2 class="section-heading">Based in Bangalore, serving major industrial & commercial zones</h2>
+        <!-- <div class="map-placeholder">
+          MAP / LOCATION IMAGE PLACEHOLDER – REPLACE WITH BANGALORE MAP OR YOUR YARD / OFFICE IMAGE
+        </div> -->
+        <p class="section-subheading" style="color:rgba(243,243,224,0.95); max-width:none;">
+          We typically deploy boom lifts, scissor lifts, man lifts and cherry pickers across most parts of Bangalore
+          and nearby industrial belts.
+        </p>
+        <ul class="location-list">
+          <li>Electronic City, Bommasandra and Hosur Road corridor.</li>
+          <li>Peenya, Nelamangala, Tumkur Road and surrounding industrial areas.</li>
+          <li>Whitefield, ITPL, Sarjapur Road and Outer Ring Road IT parks.</li>
+          <li>Bidadi, Mysore Road, Bellary Road and other highway-connected hubs.</li>
+          <li>Central Bangalore for malls, hospitals and commercial buildings.</li>
+        </ul>
+      </div>
+
+      <!-- Right: hours + FAQs + CTA -->
+      <div class="reveal from-right">
+        <div class="hours-box">
+          <div class="hours-heading">Working hours & response time</div>
+          <p class="hours-text"><strong>Regular hours:</strong> Mon – Sat, 9:00 AM to 7:00 PM.</p>
+          <p class="hours-text">
+            Enquiries received during working hours are usually responded to the same day, especially for
+            standard boom lift and scissor lift requirements.
+          </p>
+          <p class="hours-text">
+            For urgent shutdowns or night work, please mention your time window clearly so we can prioritise.
+          </p>
+        </div>
+
+        <ul class="faq-list">
+          <li class="faq-item">
+            <div class="faq-q">Can you visit our site before we confirm a rental?</div>
+            <div class="faq-a">
+              Yes. For complex or large projects in and around Bangalore, we can arrange a site visit to check
+              access paths, ground conditions and working heights before recommending equipment.
+            </div>
+          </li>
+          <li class="faq-item">
+            <div class="faq-q">Do you handle rentals outside Bangalore city?</div>
+            <div class="faq-a">
+              We primarily serve Bangalore and nearby industrial zones. For locations further away, share your site
+              pincode and duration so we can confirm feasibility.
+            </div>
+          </li>
+          <li class="faq-item">
+            <div class="faq-q">What details should I keep ready when I call?</div>
+            <div class="faq-a">
+              Working height, approximate duration, site address, floor conditions and whether you need an operator
+              are enough to start with. Photos or sketches are always helpful.
+            </div>
+          </li>
+        </ul>
+
+        <div style="margin-top:1.2rem;">
+          <button class="btn-primary js-open-enquiry">
+            <span>Click here to share your Bangalore site details</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INLINE FULL-WIDTH FORM AT BOTTOM -->
+  <section class="section inline-form-section">
+    <div style="width:100%;">
+      <iframe
+        src="form.html"
+        title="Enquiry form full page"
+        class="inline-form-frame">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+</div>
+
+<!-- MODAL POPUP WITH FORM -->
+<div class="modal-backdrop" id="enquiryModal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" type="button" id="modalCloseBtn">Close ✕</button>
+    <iframe src="form.html" class="modal-frame" title="Enquiry form popup"></iframe>
+  </div>
+</div>
+
+<script>
+  /* LOAD NAVBAR & FOOTER HTML FRAGMENTS */
+  function loadFragment(containerId, file, callback) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    fetch(file)
+      .then(function (response) { return response.text(); })
+      .then(function (html) {
+        container.innerHTML = html;
+        if (typeof callback === "function") callback();
+      })
+      .catch(function (error) { console.warn("Could not load " + file, error); });
+  }
+
+  function initNavbarBehaviour() {
+    var toggleBtn = document.getElementById("navbarToggle");
+    var mobilePanel = document.getElementById("navbarMobilePanel");
+
+    if (!toggleBtn || !mobilePanel) return;
+
+    toggleBtn.addEventListener("click", function () {
+      toggleBtn.classList.toggle("active");
+      mobilePanel.classList.toggle("open");
+    });
+
+    var links = mobilePanel.querySelectorAll("a");
+    links.forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggleBtn.classList.remove("active");
+        mobilePanel.classList.remove("open");
+      });
+    });
+  }
+
+  loadFragment("navbar-placeholder", "navbar.html", initNavbarBehaviour);
+  loadFragment("footer-placeholder", "footer.html");
+
+  /* SIMPLE SCROLL REVEAL */
+  (function () {
+    var revealElements = document.querySelectorAll(".reveal");
+
+    function onScrollReveal(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    var observer = new IntersectionObserver(onScrollReveal, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  })();
+
+  /* MODAL OPEN/CLOSE – ALL BUTTONS */
+  (function () {
+    var modal = document.getElementById("enquiryModal");
+    var closeBtn = document.getElementById("modalCloseBtn");
+
+    function openModal() {
+      if (!modal) return;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function attachEnquiryHandlers() {
+      var triggers = document.querySelectorAll(".js-open-enquiry");
+      triggers.forEach(function (el) {
+        el.addEventListener("click", openModal);
+      });
+    }
+
+    attachEnquiryHandlers();
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeModal);
+    }
+
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  })();
+</script>
+</body>
+</html>

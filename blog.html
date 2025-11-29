@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog | Boom & Scissor Lift Rental Tips in Bangalore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO META -->
+  <meta name="description" content="Read practical guides on boom lift, scissor lift, man lift and cherry picker rentals in Bangalore – safety tips, planning checklists and height-access ideas." />
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* GLOBAL RESET + BOX SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: "Poppins", sans-serif;
+      background-color: #F3F3E0;
+      color: #183B4E;
+      scroll-behavior: smooth;
+      font-size: 1rem; /* minimum font size */
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #F3F3E0;
+    }
+
+    .section {
+      width: 100%;
+      padding: 3.5rem 1.5rem;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-heading {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-subheading {
+      font-size: 1rem;
+      max-width: 36rem;
+      opacity: 0.95;
+      margin-bottom: 1.2rem;
+    }
+
+    .eyebrow {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      color: #DDA853;
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      border: 2px solid #F3F3E0;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background-color: #DDA853;
+      color: #183B4E;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .btn-primary span {
+      color: inherit;
+    }
+
+    .btn-primary:hover {
+      background-color: #F3F3E0;
+      border-color: #DDA853;
+      color: #183B4E;
+    }
+
+    .js-open-enquiry {
+      cursor: pointer;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.from-left {
+      transform: translateX(-40px);
+    }
+
+    .reveal.from-right {
+      transform: translateX(40px);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+
+    /* SECTION 1: BLOG HERO – TWO COLUMN LAYOUT */
+    .blog-hero {
+      background: radial-gradient(circle at top left, #F3F3E0 0%, #27548A 40%, #183B4E 80%);
+      color: #F3F3E0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .blog-hero-meta {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+    }
+
+    .blog-hero-card-wrap {
+      position: relative;
+    }
+
+    .blog-hero-card {
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #041522, #102a3b);
+      box-shadow: 0 24px 56px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-hero-image-placeholder {
+      width: 100%;
+      min-height: 170px;
+      background: linear-gradient(135deg, rgba(243,243,224,0.15), rgba(221,168,83,0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 1.2rem;
+    }
+
+    .blog-hero-highlight {
+      padding: 1.3rem 1.7rem 1.5rem;
+    }
+
+    .blog-hero-tag {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #DDA853;
+      margin-bottom: 0.45rem;
+    }
+
+    .blog-hero-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+
+    .blog-hero-excerpt {
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+      margin-bottom: 0.9rem;
+    }
+
+    .blog-hero-circle {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243,243,224,0.55);
+      top: -35px;
+      right: -35px;
+    }
+
+    /* .blog-hero-bar {
+      position: absolute;
+      width: 190px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #DDA853, #F3F3E0);
+      bottom: 18%;
+      left: -25%;
+    } */
+
+    /* SECTION 2: BLOG GRID (3 CARDS) */
+    .section-grid {
+      background-color: #F3F3E0;
+    }
+
+    .blog-grid {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .blog-card {
+      background-color: #FFFFFF;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .blog-card-image {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(24,59,78,0.3), rgba(221,168,83,0.75));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .blog-card-body {
+      padding: 1rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex: 1;
+    }
+
+    .blog-card-tag {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #27548A;
+    }
+
+    .blog-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .blog-card-excerpt {
+      font-size: 1rem;
+      opacity: 0.9;
+      flex: 1;
+    }
+
+    .blog-card-meta {
+      font-size: 0.95rem;
+      opacity: 0.75;
+    }
+
+    /* SECTION 3: FEATURE ROW + 2 BLOGS + CTA */
+    .section-feature-row {
+      background-color: #183B4E;
+      color: #F3F3E0;
+    }
+
+    .feature-row-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      margin-top: 1.7rem;
+      align-items: flex-start;
+    }
+
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .blog-row-card {
+      background-color: rgba(3,16,28,0.7);
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      /* display: grid; */
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 0.7rem;
+      cursor: pointer;
+    }
+
+    .blog-row-thumb {
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(243,243,224,0.18), rgba(221,168,83,0.8));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      color: #183B4E;
+      text-align: center;
+      padding: 0 0.4rem;
+    }
+
+    .blog-row-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .blog-row-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .blog-row-excerpt {
+      font-size: 0.98rem;
+      color: rgba(243,243,224,0.9);
+    }
+
+    .blog-row-tag {
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #DDA853;
+    }
+
+    .blog-cta-box {
+      background-color: #000000;
+      border-radius: 20px;
+      padding: 1.2rem 1.3rem 1.4rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-cta-box::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top left, rgba(243,243,224,0.15), transparent 60%);
+      opacity: 0.8;
+    }
+
+    .blog-cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .blog-cta-heading {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-cta-text {
+      font-size: 1rem;
+      color: rgba(243,243,224,0.9);
+      margin-bottom: 1rem;
+    }
+
+    .blog-cta-meta {
+      font-size: 0.95rem;
+      color: rgba(243,243,224,0.8);
+      margin-top: 0.8rem;
+    }
+
+    /* INLINE FORM SECTION AT BOTTOM */
+    .inline-form-section {
+      padding: 0;
+      min-height: auto;
+    }
+
+    .inline-form-frame {
+      width: 100%;
+      border: none;
+      display: block;
+      height: 900px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .blog-hero-inner,
+      .feature-row-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .blog-hero-card-wrap {
+        margin-top: 1.6rem;
+      }
+
+      .blog-row-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 2.6rem 1.2rem;
+      }
+
+      .blog-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-heading {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .blog-hero-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    #navbar-placeholder,
+    #footer-placeholder {
+      width: 100%;
+    }
+
+    /* MODAL FORM */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-content {
+      width: 96%;
+      max-width: 1120px;
+      height: 90vh;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #000;
+      position: relative;
+    }
+
+    .modal-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      z-index: 2;
+      background: rgba(0,0,0,0.65);
+      color: #F3F3E0;
+      border: 1px solid rgba(243,243,224,0.6);
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .blog-hero-image-placeholder {
+      margin-top: 50px;
+  width: 100%;
+  height: 400px;       /* adjust height as needed */
+  border-radius: 20px;
+  overflow: hidden;    /* keeps image inside */
+  padding: 0;          /* removes side spacing */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5; /* optional placeholder color */
+}
+
+.blog-hero-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills container perfectly */
+  display: block;
+}
+.blog-card-image {
+  width: 100%;
+  height: 400px;          /* adjust height as needed */
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;              /* removes side gaps */
+  margin-bottom: 16px;     /* spacing below image */
+  background: #f5f5f5;     /* optional placeholder color */
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills the container without gaps */
+  display: block;
+}
+
+.blog-row-thumb {
+  width: 100%;
+  height: 280px;           /* adjust as needed */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #f5f5f5;     /* optional placeholder */
+  padding: 0;              /* remove side gaps */
+}
+
+.blog-row-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills container without gaps */
+  display: block;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- SECTION 1: BLOG HERO (FIXED TWO-COLUMN) -->
+  <section class="section blog-hero" style="padding-top: 170px;">
+    <div class="section-inner blog-hero-inner">
+      <!-- LEFT COLUMN: TEXT -->
+      <div class="reveal from-left">
+        <div class="eyebrow">Insights & guides</div>
+        <h1 class="section-heading">Blog – Working safely and smartly at height in Bangalore</h1>
+        <p class="section-subheading">
+          Short, practical articles to help you plan boom lift, scissor lift, man lift and cherry picker rentals for
+          industrial, commercial and infrastructure projects across Bangalore.
+        </p>
+        <p class="blog-hero-meta">
+          Learn how to choose the right equipment, prepare your site, improve safety and reduce downtime on your next
+          project that needs work at height.
+        </p>
+      </div>
+
+      <!-- RIGHT COLUMN: CARD WITH IMAGE + FEATURED ARTICLE -->
+      <div class="blog-hero-card-wrap reveal from-right">
+        <div class="blog-hero-card">
+          <div class="blog-hero-image-placeholder">
+  <img src="./images/bs3.png" alt="Featured Boom/Scissor Lift Photo">
+</div>
+
+          <div class="blog-hero-highlight">
+            <div class="blog-hero-tag">Featured article</div>
+            <div class="blog-hero-title">
+              Checklist for planning a boom or scissor lift rental in Bangalore
+            </div>
+            <p class="blog-hero-excerpt">
+              Before the machine reaches your site, a little planning can prevent delays and safety issues. We walk
+              through simple checks on ground conditions, access paths, power sources and working heights.
+            </p>
+            <button class="btn-primary js-open-enquiry">
+              <span>Click here to get the full checklist &amp; quote</span>
+            </button>
+          </div>
+        </div>
+        <div class="blog-hero-circle"></div>
+        <div class="blog-hero-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: 3 BLOG CARDS GRID -->
+  <section class="section section-grid">
+    <div class="section-inner reveal">
+      <div class="eyebrow">Latest from our team</div>
+      <h2 class="section-heading">Practical blogs on height access equipment</h2>
+      <p class="section-subheading" style="color:#183B4E;">
+        These articles are written from day-to-day rental experience with boom lifts, scissor lifts, man lifts and
+        cherry pickers on Bangalore projects.
+      </p>
+
+     <div class="blog-grid">
+
+  <!-- BLOG 1 -->
+  <article class="blog-card reveal from-left js-open-enquiry">
+    <div class="blog-card-image">
+      <img src="./images/b4.webp" alt="Boom Lift on Site">
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-tag">Boom lifts</div>
+      <h3 class="blog-card-title">5 questions to decide between a boom lift and a scissor lift</h3>
+      <p class="blog-card-excerpt">
+        Unsure which machine to use? We compare boom lifts and scissor lifts based on outreach,
+        platform space, floor conditions and typical Bangalore project scenarios.
+      </p>
+      <p class="blog-card-meta">Click to open the enquiry form and share your project details.</p>
+    </div>
+  </article>
+
+  <!-- BLOG 2 -->
+  <article class="blog-card reveal js-open-enquiry">
+    <div class="blog-card-image">
+      <img src="./images/s6.jpg" alt="Warehouse Scissor Lift">
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-tag">Scissor lifts</div>
+      <h3 class="blog-card-title">How to prepare your warehouse floor for a scissor lift</h3>
+      <p class="blog-card-excerpt">
+        Ground conditions matter. This guide explains checks for slab thickness, ramps, thresholds and
+        loading bays before you bring scissor lifts into your Bangalore warehouse.
+      </p>
+      <p class="blog-card-meta">Click here to discuss scissor lift options for your facility.</p>
+    </div>
+  </article>
+
+  <!-- BLOG 3 -->
+  <article class="blog-card reveal from-right js-open-enquiry">
+    <div class="blog-card-image">
+      <img src="./images/b1.webp" alt="Cherry Picker Street Work">
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-tag">Cherry pickers</div>
+      <h3 class="blog-card-title">Planning night work with truck-mounted cherry pickers</h3>
+      <p class="blog-card-excerpt">
+        Street-light, signage and façade jobs often happen at night. We cover permits, traffic management
+        and safe positioning for cherry pickers on busy Bangalore roads.
+      </p>
+      <p class="blog-card-meta">Click to open the form and request a cherry picker schedule.</p>
+    </div>
+  </article>
+
+</div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: 2 ROW BLOGS + CTA -->
+  <section class="section section-feature-row">
+    <div class="section-inner">
+      <div class="eyebrow">More insights</div>
+      <h2 class="section-heading">Deep dives on safety, uptime and budgeting</h2>
+      <p class="section-subheading">
+        These posts go slightly deeper into cost control, safety planning and uptime when you use boom lifts,
+        scissor lifts and man lifts on long-term projects.
+      </p>
+
+    <div class="feature-row-inner">
+
+  <!-- LEFT: TWO ROW BLOG CARDS -->
+  <div class="blog-list reveal from-left">
+
+    <!-- BLOG 4 -->
+    <article class="blog-row-card js-open-enquiry">
+      <div class="blog-row-thumb">
+        <img src="./images/b8.jpg" alt="Man Lift in Atrium">
+      </div>
+      <div class="blog-row-content">
+        <div class="blog-row-tag">Man lifts</div>
+        <div class="blog-row-title">Using compact man lifts in finished office interiors</div>
+        <div class="blog-row-excerpt">
+          Learn where small man lifts outperform ladders inside offices, atriums and finished tech parks
+          without damaging floors or walls.
+        </div>
+      </div>
+    </article>
+
+    <!-- BLOG 5 -->
+    <article class="blog-row-card js-open-enquiry">
+      <div class="blog-row-thumb">
+        <img src="./images//sc01.webp" alt="Multiple Lifts at Site">
+      </div>
+      <div class="blog-row-content">
+        <div class="blog-row-tag">Project planning</div>
+        <div class="blog-row-title">Budgeting for long-term boom and scissor lift rentals</div>
+        <div class="blog-row-excerpt">
+          A simple framework to compare daily, weekly and monthly rental options and decide when it
+          makes sense to keep a machine on site for longer.
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- RIGHT: CTA BOX -->
+  <div class="blog-cta-box reveal from-right">
+    <div class="blog-cta-content">
+      <div class="eyebrow" style="color:#DDA853; margin-bottom:0.4rem;">Need help?</div>
+      <h3 class="blog-cta-heading">Not sure which lift suits your next job?</h3>
+      <p class="blog-cta-text">
+        If you’re reading these blogs because you have an upcoming project, share a few details and
+        our Bangalore team will recommend a boom lift, scissor lift, man lift or cherry picker that
+        fits your site and budget.
+      </p>
+      <button class="btn-primary js-open-enquiry">
+        <span>Click here to send your enquiry from the blog</span>
+      </button>
+      <p class="blog-cta-meta">
+        Call: <a href="tel:+919999999999" style="text-decoration:none; color:inherit;">+91 99999 99999</a> &nbsp; | &nbsp;
+  Email: <a href="mailto:info@boomliftbangalore.com" style="text-decoration:none; color:inherit;">info@boomliftbangalore.com</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+  </section>
+
+  <!-- INLINE FULL-WIDTH FORM AT BOTTOM -->
+  <section class="section inline-form-section">
+    <div style="width:100%;">
+      <iframe
+        src="form.html"
+        title="Enquiry form full page"
+        class="inline-form-frame">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+</div>
+
+<!-- MODAL WITH FULL-WIDTH FORM (POPUP) -->
+<div class="modal-backdrop" id="enquiryModal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" type="button" id="modalCloseBtn">Close ✕</button>
+    <iframe src="form.html" class="modal-frame" title="Enquiry form popup"></iframe>
+  </div>
+</div>
+
+<script>
+  /* LOAD NAVBAR & FOOTER HTML FRAGMENTS */
+  function loadFragment(containerId, file, callback) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    fetch(file)
+      .then(function (response) { return response.text(); })
+      .then(function (html) {
+        container.innerHTML = html;
+        if (typeof callback === "function") callback();
+      })
+      .catch(function (error) { console.warn("Could not load " + file, error); });
+  }
+
+  function initNavbarBehaviour() {
+    var toggleBtn = document.getElementById("navbarToggle");
+    var mobilePanel = document.getElementById("navbarMobilePanel");
+
+    if (!toggleBtn || !mobilePanel) return;
+
+    toggleBtn.addEventListener("click", function () {
+      toggleBtn.classList.toggle("active");
+      mobilePanel.classList.toggle("open");
+    });
+
+    var links = mobilePanel.querySelectorAll("a");
+    links.forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggleBtn.classList.remove("active");
+        mobilePanel.classList.remove("open");
+      });
+    });
+  }
+
+  loadFragment("navbar-placeholder", "navbar.html", initNavbarBehaviour);
+  loadFragment("footer-placeholder", "footer.html");
+
+  /* SIMPLE SCROLL REVEAL */
+  (function () {
+    var revealElements = document.querySelectorAll(".reveal");
+
+    function onScrollReveal(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    var observer = new IntersectionObserver(onScrollReveal, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  })();
+
+  /* MODAL OPEN/CLOSE – ALL BLOG CARDS & BUTTONS */
+  (function () {
+    var modal = document.getElementById("enquiryModal");
+    var closeBtn = document.getElementById("modalCloseBtn");
+
+    function openModal() {
+      if (!modal) return;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function attachEnquiryHandlers() {
+      var triggers = document.querySelectorAll(".js-open-enquiry");
+      triggers.forEach(function (el) {
+        el.addEventListener("click", openModal);
+      });
+    }
+
+    attachEnquiryHandlers();
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeModal);
+    }
+
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  })();
+</script>
+</body>
+</html>

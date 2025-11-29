@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar - Boom Lift Rental Bangalore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /*******************************
+      GLOBAL RESET + BOX SIZING
+    *******************************/
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #F3F3E0;
+      line-height: 1.4;
+    }
+
+    /*******************************
+      NAVBAR WRAPPER (FULL WIDTH)
+      GRADIENT BACKGROUND
+      FIXED ON SCROLL
+    *******************************/
+    .navbar-wrapper {
+      width: 100%;
+      background: linear-gradient(90deg, #183B4E 0%, #27548A 100%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      position: fixed;   /* <= FIXED so it never hides */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    /*******************************
+      NAVBAR CONTAINER (NOT FULL WIDTH)
+    *******************************/
+    .navbar {
+      max-width: 1200px;   /* not full width */
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    /*******************************
+      LOGO
+    *******************************/
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #F3F3E0;
+      white-space: nowrap;
+    }
+
+    .navbar-logo-placeholder {
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      background-color: #DDA853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #183B4E;
+      text-transform: uppercase;
+    }
+
+    /*******************************
+      DESKTOP NAV LINKS
+    *******************************/
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      flex: 1;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #F3F3E0;
+      padding-bottom: 2px;
+      transition: color 0.3s ease;   /* only color change */
+    }
+
+    .navbar-links a:hover {
+      color: #DDA853;
+    }
+
+    /*******************************
+      CALL BUTTON (DESKTOP)
+      BASE COLOR: #DDA853
+    *******************************/
+    .navbar-call-btn {
+      padding: 0.6rem 1.3rem;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #DDA853;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .navbar-call-btn a {
+      text-decoration: none;
+      color: #183B4E;
+    }
+
+    .navbar-call-btn:hover {
+      background-color: #F3F3E0;   /* only color change */
+      color: #183B4E;
+    }
+
+    .navbar-call-btn:hover a {
+      color: #183B4E;
+    }
+
+    /* desktop-only button */
+    .navbar-call-btn-desktop {
+      display: inline-block;
+    }
+
+    /*******************************
+      HAMBURGER (MOBILE TOGGLE)
+    *******************************/
+    .navbar-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 32px;
+      height: 26px;
+      position: relative;
+    }
+
+    .navbar-toggle-line {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 999px;
+      background-color: #F3F3E0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navbar-toggle-line:nth-child(1) { top: 0; }
+    .navbar-toggle-line:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    .navbar-toggle-line:nth-child(3) { bottom: 0; }
+
+    /* X state */
+    .navbar-toggle.active .navbar-toggle-line:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .navbar-toggle.active .navbar-toggle-line:nth-child(2) {
+      opacity: 0;
+    }
+    .navbar-toggle.active .navbar-toggle-line:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /*******************************
+      MOBILE MENU WRAPPER
+    *******************************/
+    .navbar-mobile-menu {
+      display: none;
+    }
+
+    /*******************************
+      RESPONSIVE
+    *******************************/
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.85rem 1.1rem;
+      }
+
+      .navbar-links {
+        display: none;  /* hide desktop links */
+      }
+
+      .navbar-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* hide desktop call button on mobile */
+      .navbar-call-btn-desktop {
+        display: none;
+      }
+
+      .navbar-mobile-menu {
+        display: block;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.1rem 1.2rem;
+      }
+
+      .navbar-mobile-panel {
+        display: none;
+        background-color: #183B4E;
+        border-radius: 0 0 18px 18px;
+        padding: 1rem;
+      }
+
+      .navbar-mobile-panel.open {
+        display: block;
+      }
+
+      .navbar-mobile-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .navbar-mobile-links a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #F3F3E0;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-mobile-links a:hover {
+        color: #DDA853;
+      }
+
+      /* mobile call button fills width */
+      .navbar-call-btn-mobile {
+        width: 100%;
+      }
+    }
+
+    .navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px; /* spacing between image and text */
+}
+
+.navbar-logo-img img {
+  height: 72px;  
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #DDA853;  /* adjust size as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar-wrapper">
+    <header class="navbar">
+
+      <!-- LOGO -->
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-img">
+    <img src="./images/logo-b.png" alt="Boom Lift Rental Bangalore Logo">
+  </div>
+        <span>BOOM LIFT <br> RENTALS BANGALORE</span>
+      </a>
+
+      <!-- DESKTOP NAV LINKS -->
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="boom-lift-rentals.html">Boom Lift Rentals</a></li>
+        <li><a href="scissor-lift-rentals.html">Scissor Lift Rentals</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT SIDE: DESKTOP CALL + HAMBURGER -->
+      <div>
+        <!-- desktop only button -->
+        <button class="navbar-call-btn navbar-call-btn-desktop">
+          <a href="tel:+919999999999">Click to call us</a>
+        </button>
+
+        <!-- hamburger for mobile -->
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span class="navbar-toggle-line"></span>
+          <span class="navbar-toggle-line"></span>
+          <span class="navbar-toggle-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="navbar-mobile-menu">
+      <div class="navbar-mobile-panel" id="navbarMobilePanel">
+        <ul class="navbar-mobile-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="boom-lift-rentals.html">Boom Lift Rentals</a></li>
+          <li><a href="scissor-lift-rentals.html">Scissor Lift Rentals</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- mobile only call button -->
+        <button class="navbar-call-btn navbar-call-btn-mobile">
+          <a href="tel:+919999999999">Click to call us</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // MOBILE MENU TOGGLE
+    const toggleBtn = document.getElementById('navbarToggle');
+    const mobilePanel = document.getElementById('navbarMobilePanel');
+
+    if (toggleBtn && mobilePanel) {
+      toggleBtn.addEventListener('click', function () {
+        toggleBtn.classList.toggle('active');
+        mobilePanel.classList.toggle('open');
+      });
+    }
+  </script>
+
+</body>
+</html>

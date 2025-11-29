@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enquiry Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* GLOBAL RESET + BOX-SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #DDA853 30%, #27548A 80%, #3183B4 100%);
+      color: #F3F3E0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* PAGE WRAPPER */
+    .form-page {
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.3fr);
+      gap: 0;
+      border-radius: 22px;
+      overflow: hidden;
+      background-color: rgba(3, 16, 28, 0.35);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(4px);
+    }
+
+    /* LEFT SIDE: TEXT + FORM */
+    .form-panel {
+      padding: 2.2rem 2.4rem;
+      background-color: rgba(24, 59, 78, 0.92);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background-color: rgba(221, 168, 83, 0.12);
+      color: #DDA853;
+      margin-bottom: 0.8rem;
+    }
+
+    .form-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+      max-width: 32rem;
+      color: #F3F3E0;
+      opacity: 0.9;
+      margin-bottom: 1.1rem;
+    }
+
+    .form-highlights {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #F3F3E0;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-details {
+      font-size: 0.8rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .contact-details span {
+      display: block;
+    }
+
+    .contact-details strong {
+      color: #DDA853;
+      font-weight: 600;
+    }
+
+    /* FORM FIELDS */
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem 1rem;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: #F3F3E0;
+    }
+
+    label span.required {
+      color: #DDA853;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(243, 243, 224, 0.25);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.85rem;
+      background-color: rgba(3, 16, 28, 0.55);
+      color: #F3F3E0;
+      outline: none;
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(243, 243, 224, 0.6);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #DDA853;
+      background-color: rgba(3, 16, 28, 0.85);
+    }
+
+    /* SUBMIT AREA */
+    .form-actions {
+      grid-column: 1 / -1;
+      margin-top: 0.6rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .submit-btn {
+      padding: 0.7rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #DDA853;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #183B4E;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .submit-btn:hover {
+      background-color: #F3F3E0;   /* only colour change */
+      color: #183B4E;
+    }
+
+    /* RIGHT SIDE ART PANEL */
+    .art-panel {
+      position: relative;
+      background: radial-gradient(circle at top left, #F3F3E0 0%, #27548A 45%, #183B4E 80%);
+      overflow: hidden;
+    }
+
+    .art-panel-inner {
+      position: absolute;
+      inset: 10%;
+      border-radius: 22px;
+      border: 1px solid rgba(243, 243, 224, 0.35);
+      overflow: hidden;
+      background-image: url("./images/s5.webp"); /* ← YOUR IMAGE */
+      background-size: cover;     /* fill without gaps */
+      background-position: center;/* align properly */
+      background-repeat: no-repeat;
+      background-blend-mode: overlay;
+      background-color: rgba(3,16,28,0.4);
+    }
+
+    .art-pill {
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.9;
+    }
+
+    .art-pill--1 {
+      width: 190px;
+      height: 28px;
+      background: linear-gradient(90deg, #DDA853, #F3F3E0);
+      top: 16%;
+      left: -20%;
+    }
+
+    .art-pill--2 {
+      width: 150px;
+      height: 26px;
+      background: linear-gradient(90deg, #27548A, #183B4E);
+      top: 40%;
+      right: -25%;
+    }
+
+    .art-pill--3 {
+      width: 120px;
+      height: 24px;
+      background: linear-gradient(90deg, #F3F3E0, #DDA853);
+      bottom: 22%;
+      left: 10%;
+    }
+
+    .art-dots {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px dashed rgba(243,243,224,0.45);
+      bottom: -30px;
+      right: -10px;
+    }
+
+    .art-badge {
+      position: absolute;
+      bottom: 16%;
+      right: 12%;
+      background-color: rgba(3,16,28,0.85);
+      color: #F3F3E0;
+      padding: 0.6rem 0.8rem;
+      border-radius: 16px;
+      font-size: 0.8rem;
+      max-width: 160px;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    }
+
+    .art-badge strong {
+      display: block;
+      color: #DDA853;
+      margin-bottom: 0.15rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* RESPONSIVE – MOBILE: ONLY FORM PANEL VISIBLE */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .form-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .art-panel {
+        display: none; /* hide right art on mobile */
+      }
+
+      .form-panel {
+        padding: 1.6rem 1.4rem;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-page">
+    <div class="form-layout">
+
+      <!-- LEFT: CONTENT + FORM -->
+      <section class="form-panel">
+        <div class="badge">Enquiry form</div>
+
+        <h1 class="form-title">Get Your Boom Lift Rental Quote</h1>
+
+        <p class="form-subtitle">
+          Send us your enquiry and our team in Kerala will respond with a tailored rental quote for your project.
+          Reach out for boom lifts, scissor lifts, and man lift rentals across Kerala.
+        </p>
+
+        <p class="form-highlights">
+          FAST RESPONSE • BEST RENTAL RATES • PROFESSIONAL SUPPORT
+        </p>
+
+        <div class="contact-details">
+          <span><strong>CALL:</strong> <a href="tel:+919999999999" style="text-decoration:none; color:inherit;">+91 99999 99999</a></span>
+          <span><strong>EMAIL:</strong> <a href="mailto:info@boomliftbangalore.com" style="text-decoration:none; color:inherit;">info@boomliftbangalore.com</a></span>
+          <span><strong>WORKING HOURS:</strong> Mon – Sat, 9:00 AM to 7:00 PM</span>
+        </div>
+
+        <!-- ENQUIRY FORM -->
+        <!-- REMOVED novalidate SO REQUIRED FIELDS WORK -->
+        <form action="submit-enquiry.php" method="post">
+          <div class="form-full">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-full">
+            <label for="email">Email Address <span class="required"></span></label>
+            <input type="email" id="email" name="email" placeholder="eg. you@example.com">
+          </div>
+
+          <div>
+            <label for="phone">Contact Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required>
+          </div>
+
+          <div>
+            <label for="location">Area / Location <span class="required"></span></label>
+            <input type="text" id="location" name="location" placeholder="Project location in Kerala">
+          </div>
+
+          <div class="form-full">
+            <label for="equipment">Select Equipment</label>
+            <select id="equipment" name="equipment">
+              <option value="" selected disabled>-- Select equipment --</option>
+              <option value="boom-lift">Boom Lift</option>
+              <option value="scissor-lift">Scissor Lift</option>
+              <!-- <option value="man-lift">Man Lift</option> -->
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <!--
+          <div class="form-full">
+            <label for="message">Request to Get Quote</label>
+            <textarea id="message" name="message" placeholder="Share your lift height, duration, and site details to get an accurate quote."></textarea>
+          </div>
+          -->
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">
+              Click here to get my quote
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RIGHT: DECORATIVE ART PANEL (HIDDEN ON MOBILE) -->
+      <aside class="art-panel">
+        <div class="art-panel-inner">
+          <div class="art-pill art-pill--1"></div>
+          <div class="art-pill art-pill--2"></div>
+          <div class="art-pill art-pill--3"></div>
+          <div class="art-dots"></div>
+
+          <div class="art-badge">
+            <strong>ON-SITE SUPPORT</strong>
+            Boom & scissor lift rentals with trained operators and quick deployment across Kerala.
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- JS is not needed for required fields to work, so this can be removed or kept if you add custom logic later -->
+  <script>
+    // Example: you could add custom behaviour here later if needed.
+  </script>
+</body>
+</html>
