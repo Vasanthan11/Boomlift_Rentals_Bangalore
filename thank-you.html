@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You - Enquiry Received</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- POPPINS FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #DDA853 30%, #27548A 80%, #3183B4 100%);
+      color: #F3F3E0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .thankyou-wrapper {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .thankyou-card {
+      background-color: rgba(3, 16, 28, 0.85);
+      border-radius: 22px;
+      padding: 2.4rem 2.1rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background-color: rgba(221, 168, 83, 0.12);
+      color: #DDA853;
+      margin-bottom: 0.9rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #F3F3E0;
+      opacity: 0.92;
+      margin-bottom: 1.4rem;
+      line-height: 1.6;
+    }
+
+    .note-line {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #DDA853;
+      margin-bottom: 2rem;
+    }
+
+    .home-btn {
+      display: inline-block;
+      padding: 0.7rem 1.8rem;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #DDA853;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #183B4E;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .home-btn:hover {
+      background-color: #F3F3E0;  /* light background on hover */
+      color: #183B4E;
+    }
+
+    @media (max-width: 480px) {
+      .thankyou-card {
+        padding: 2rem 1.6rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-wrapper">
+    <div class="thankyou-card">
+      <div class="badge">Enquiry received</div>
+      <h1>Thank you!</h1>
+      <p class="subtitle">
+        Your boom lift / scissor lift enquiry has been submitted successfully.
+        Our team will review your requirements and get back to you with a tailored quote.
+      </p>
+      <div class="note-line">
+        FAST RESPONSE • BEST RENTAL RATES • PROFESSIONAL SUPPORT
+      </div>
+      <a href="index.html" class="home-btn">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
